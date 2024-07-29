@@ -5,9 +5,9 @@ import Confetti from 'react-confetti'
 
 export const ContactForm = () => {
   const [isSubmitted, setSubmitted] = useState(false)
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [name, setName] = useState('example')
+  const [email, setEmail] = useState('example@example.com')
+  const [message, setMessage] = useState('What Ho')
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault()
