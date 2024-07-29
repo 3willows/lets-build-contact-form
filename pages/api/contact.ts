@@ -12,13 +12,12 @@ export default async function handler(
   console.log('Data', req.body)
 
   const mailgun = new Mailgun(FormData)
-  const client = mailgun.client({ username: 'api', key: API_KEY,
-    url:"https://api.eu.mailgun.net" })
+  const client = mailgun.client({ username: 'api', key: API_KEY })
 
   const { name, email, message } = req.body
 
   const messageData = {
-    from: 'Jasper <contact@Jasper.com>',
+    from:` Jasper <contact@${DOMAIN}>`,
     to: 'rubbercapybara@gmail.com',
     subject: 'Hello!',
     text: `Hello,
