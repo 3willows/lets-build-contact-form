@@ -79,7 +79,7 @@ export const ContactForm = () => {
         ></textarea>
       </div>
       <button className="btn btn-primary" type="submit">
-        Submit
+       Try again 
       </button>
     </form>
   )
